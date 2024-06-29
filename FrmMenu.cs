@@ -36,7 +36,7 @@ namespace controle_de_estoque1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            time  = DateTime.Now;
+            time = DateTime.Now;
             lblData.Text = DateTime.Now.ToString("dd/MM/yyyy");
             lblHora.Text = time.ToLongTimeString();
         }
@@ -51,6 +51,31 @@ namespace controle_de_estoque1
         private void novoForm1()
         {
             Application.Run(new Form1());
+        }
+
+        private void cdtProduto_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            nt = new Thread(novoFrmCDproduto);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmCDproduto()
+        {
+            Application.Run(new FrmCDproduto());
+        }
+
+        private void cdtUsuario_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novoFrmCDfuncionario);
+            nt.SetApartmentState (ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmCDfuncionario()
+        {
+            Application.Run(new FrmCDfuncionario());
         }
     }
 }

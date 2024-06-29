@@ -11,18 +11,23 @@ using System.Threading;
 
 namespace controle_de_estoque1
 {
-    public partial class Form1 : Form
+    public partial class FrmCDproduto : Form
     {
         Thread nt;
 
-        public Form1()
+        public FrmCDproduto()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FrmCDproduto_Load(object sender, EventArgs e)
         {
-        this.Close();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
             nt = new Thread(novofrmMenu);
             nt.SetApartmentState(ApartmentState.STA);
             nt.Start();
@@ -32,5 +37,6 @@ namespace controle_de_estoque1
         {
             Application.Run(new FrmMenu());
         }
+    
     }
 }

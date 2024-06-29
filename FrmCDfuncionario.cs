@@ -5,24 +5,25 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
 namespace controle_de_estoque1
 {
-    public partial class Form1 : Form
+    public partial class FrmCDfuncionario : Form
     {
         Thread nt;
-
-        public Form1()
+        public FrmCDfuncionario()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-        this.Close();
+
+            this.Close();
             nt = new Thread(novofrmMenu);
             nt.SetApartmentState(ApartmentState.STA);
             nt.Start();

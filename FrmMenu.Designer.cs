@@ -45,8 +45,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
@@ -86,6 +86,7 @@
             this.cdtUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cdtUsuario.TabIndex = 0;
             this.cdtUsuario.TabStop = false;
+            this.cdtUsuario.Click += new System.EventHandler(this.cdtUsuario_Click);
             // 
             // saida
             // 
@@ -146,6 +147,7 @@
             this.cdtProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cdtProduto.TabIndex = 0;
             this.cdtProduto.TabStop = false;
+            this.cdtProduto.Click += new System.EventHandler(this.cdtProduto_Click);
             // 
             // label1
             // 
@@ -239,6 +241,19 @@
             this.panel1.Size = new System.Drawing.Size(138, 741);
             this.panel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(0, 625);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "LOGOUT";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
@@ -248,19 +263,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(0, 682);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 59);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "LOGOUT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 

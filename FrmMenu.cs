@@ -77,5 +77,54 @@ namespace controle_de_estoque1
         {
             Application.Run(new FrmCDfuncionario());
         }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            nt = new Thread(novoFrmEstoque);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmEstoque()
+        {
+            Application.Run(new FrmEstoque());
+        }
+
+        private void saida_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novoFrmSaidaproduto);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmSaidaproduto()
+        {
+            Application.Run(new FrmSaidaproduto());
+        }
+
+        private void entrada_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novoFrmEntradaproduto);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmEntradaproduto()
+        {
+            Application.Run(new FrmEntradaproduto());
+        }
+
+        private void Relatorio_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novoFrmRelatorio);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmRelatorio()
+        {
+            Application.Run(new FrmRelatorio());
+        }
     }
 }

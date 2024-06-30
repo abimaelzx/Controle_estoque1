@@ -52,6 +52,7 @@
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnEstoque = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Backup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdtUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saida)).BeginInit();
@@ -99,6 +100,7 @@
             this.saida.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.saida.TabIndex = 0;
             this.saida.TabStop = false;
+            this.saida.Click += new System.EventHandler(this.saida_Click);
             // 
             // Relatorio
             // 
@@ -111,6 +113,7 @@
             this.Relatorio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Relatorio.TabIndex = 0;
             this.Relatorio.TabStop = false;
+            this.Relatorio.Click += new System.EventHandler(this.Relatorio_Click);
             // 
             // entrada
             // 
@@ -123,6 +126,7 @@
             this.entrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.entrada.TabIndex = 0;
             this.entrada.TabStop = false;
+            this.entrada.Click += new System.EventHandler(this.entrada_Click);
             // 
             // rgtProduto
             // 
@@ -233,6 +237,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -246,7 +251,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(0, 625);
+            this.button1.Location = new System.Drawing.Point(0, 622);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 54);
             this.button1.TabIndex = 1;
@@ -259,7 +264,7 @@
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(21, 12);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox8.Size = new System.Drawing.Size(70, 70);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -312,6 +317,18 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Location = new System.Drawing.Point(0, 186);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(138, 54);
+            this.btnEstoque.TabIndex = 2;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // FrmMenu
             // 
@@ -378,5 +395,6 @@
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }

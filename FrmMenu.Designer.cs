@@ -45,6 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.lblData = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnEstoque = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Backup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cdtUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.saida)).BeginInit();
@@ -75,6 +75,7 @@
             this.Backup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Backup.TabIndex = 0;
             this.Backup.TabStop = false;
+            this.Backup.Click += new System.EventHandler(this.Backup_Click);
             // 
             // cdtUsuario
             // 
@@ -139,6 +140,7 @@
             this.rgtProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.rgtProduto.TabIndex = 0;
             this.rgtProduto.TabStop = false;
+            this.rgtProduto.Click += new System.EventHandler(this.rgtProduto_Click);
             // 
             // cdtProduto
             // 
@@ -228,16 +230,15 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(797, 586);
+            this.label7.Location = new System.Drawing.Point(832, 586);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 20);
+            this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Registrar Produto";
+            this.label7.Text = "Estoque";
             this.label7.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -245,6 +246,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(138, 741);
             this.panel1.TabIndex = 3;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Location = new System.Drawing.Point(836, 495);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(10, 11);
+            this.btnEstoque.TabIndex = 2;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // button1
             // 
@@ -261,6 +274,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(21, 12);
             this.pictureBox8.Name = "pictureBox8";
@@ -318,24 +332,13 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnEstoque
-            // 
-            this.btnEstoque.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.Location = new System.Drawing.Point(0, 186);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(138, 54);
-            this.btnEstoque.TabIndex = 2;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = false;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1350, 741);
+            this.Controls.Add(this.btnEstoque);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblData);
             this.Controls.Add(this.label9);

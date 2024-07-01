@@ -126,5 +126,31 @@ namespace controle_de_estoque1
         {
             Application.Run(new FrmRelatorio());
         }
+
+        private void rgtProduto_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            nt = new Thread(novoFrmEstoque1);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novoFrmEstoque1()
+        {
+            Application.Run(new FrmEstoque());
+        }
+
+        private void Backup_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novofrmBackup);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+
+        private void novofrmBackup()
+        {
+            Application.Run(new FrmBackup());
+        }
     }
 }

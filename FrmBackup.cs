@@ -22,12 +22,15 @@ namespace controle_de_estoque1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             this.Close();
             nt = new Thread(novofrmMenu);
             nt.SetApartmentState(ApartmentState.STA);
             nt.Start();
         }
-
         private void novofrmMenu()
         {
             Application.Run(new FrmMenu());

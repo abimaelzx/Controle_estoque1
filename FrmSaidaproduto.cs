@@ -23,14 +23,14 @@ namespace controle_de_estoque1
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            nt = new Thread(novofrmMenu);
+            nt = new Thread(novofrmEstoque);
             nt.SetApartmentState(ApartmentState.STA);
             nt.Start();
         }
 
-        private void novofrmMenu()
+        private void novofrmEstoque()
         {
-            Application.Run(new FrmMenu());
+            Application.Run(new FrmEstoque());
         }
     }
 }

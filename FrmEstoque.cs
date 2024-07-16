@@ -32,5 +32,29 @@ namespace controle_de_estoque1
         {
             Application.Run(new FrmMenu());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novofrmSaidaproduto);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novofrmSaidaproduto()
+        {
+            Application.Run(new FrmSaidaproduto());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            nt = new Thread(novofrmEntradaproduto);
+            nt.SetApartmentState(ApartmentState.STA);
+            nt.Start();
+        }
+        private void novofrmEntradaproduto()
+        {
+            Application.Run(new FrmEntradaproduto());
+        }
     }
 }

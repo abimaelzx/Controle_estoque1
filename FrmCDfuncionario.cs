@@ -64,7 +64,7 @@ namespace controle_de_estoque1
                 using (conexao = new MySqlConnection(data_souce))
                 {
                     string sql = "INSERT INTO usuario (Nome, Cpf,Rg ,Contato,email ,pis ,cep ,bairro ,cidade,ctTrabalho,genero,estado_civil,uf ,nacionalidade,senha)" +
-                        "VALUES( @Nome, @Cpf,@Rg ,@Contato,@email ,@pis ,@cep ,@bairro,@cidade,@2ctTrabalho,@genero,@estado_civil,@uf ,@nacionalidade,@senha)";
+                        "VALUES( @Nome, @Cpf,@Rg ,@Contato,@email ,@pis ,@cep ,@bairro,@cidade,@ctTrabalho,@genero,@estado_civil,@uf ,@nacionalidade,@senha)";
                     using (MySqlCommand comando = new MySqlCommand(sql, conexao))
                     {
                      
